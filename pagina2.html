@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoFinal2</title>
+    <script src="scripts.js">//Nombre Alumno: Alejandro Cruz Álvarez Carranza</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="justify-content-center">
+  <div class="align-self center" style="width: 56rem;margin-left: auto;margin-right: auto;">
+    <div class="d-inline text-center">
+
+      <h1>Proyecto Final - Página 2</h1>
+      <h2>Materia: Desarrollo Web</h2>
+      <h2>Alumno: Álvarez Carranza Alejandro Cruz</h2>
+      <p>Aspectos Usados en esta página: Clases, Métodos, Getters, Setters, Código JS a JSON, JSON a codigo JS, filtro y selección de datos recuperados, uso de localStorage, consumo de WebService, uso de Eventos de Dom (OnCLick) y Bootstrap</p>
+      <h4>Puede ingresar Cualquier ciudad por ejemplo: tulum, bacalar, cancun, hong kong, new york, tambien puede cambiar el nombre de las ciudades ya generadas</h4>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" type="button" onclick="control.insertarCiudad()">Añadir Ciudad</button>
+        </div>
+        <input id="nombreCiudad" type="text" class="form-control" placeholder="Nombre de la Ciudad" aria-label="" aria-describedby="basic-addon1">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" onclick="control.convertirJson()">Convertir Datos A Json</button>
+          <button class="btn btn-outline-secondary" type="button" onclick="regresar()">Regresar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card-group" id="grupo" style="width: 76rem;margin-left: auto;margin-right: auto;">
+      <script>
+        const control = new controlCiudades(localStorage.getItem("ciudad"));
+        function regresar(){
+          window.location="pagina1.html";
+        }
+      </script>
+  </div>
+</body>
+</html>
